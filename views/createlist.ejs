@@ -1,0 +1,36 @@
+<% include _parts/header %>
+
+
+<section class="module">
+  <h1 class="middle center sabo">create a new List</h1>
+</section>
+
+
+
+  <form name="create-snippet-form" id="create-snippet-form" method="post">
+    <section class="module">
+      <div class="wrap">
+        <input type="text" id="name" name="name" required placeholder="Name of list" />
+      </div>
+    </section>
+
+    <section class="module">
+      <h1 class="middle center sabo">info</h1>
+      <textarea rows="4" cols="50" id="info" name="info" placeholder="What is your list about..."></textarea>      
+      
+      <div class="bottombar clearfix">
+      <div class="tags clearfix">
+        <span class="tagicon"></span>        
+        <span id="taglabel">Tags: </span>
+        <span id="tagspan"><input type="text" id="tags" name="tags" placeholder="Add tags here: CSS, JavaScript, ..."/></span>
+
+      </div>
+        <div class="form-submit">
+          <input type="submit" id="savebtn" value="Save" />
+        </div>
+      </div>
+    </section>
+  </form>
+
+
+<% include _parts/footer %>

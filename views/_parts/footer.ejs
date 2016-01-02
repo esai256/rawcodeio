@@ -1,0 +1,149 @@
+  <div id="footerstripe"></div>
+  <div id="footer">
+    <div class="small">
+      <div class="footermenu clearfix">
+        <ul>
+          <li>About</li>
+          <li><a href="/about">The site</a></li>
+          <li><a href="/resources">Credits</a></li>
+        </ul>
+        <ul>
+          <li>Legal</li>
+          <li><a href="/license">License</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/impressum">Impressum</a></li>
+        </ul>
+        <ul>
+          <li>Developer</li>
+          <li><a href="/documentation">Docs</a></li>
+        </ul>
+      </div>
+
+      <div class="footerlogo">
+        <div class="suqarelogo"></div>
+        <span>2015</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="social clearfix">
+    <div class="mail clearfix">
+      <div class="box">
+        <div class="bubble">
+          <p>Say hi</p>
+          <a href="mailto:hi@rawcode.io">hi@rawcode.io</a>
+        </div>
+      </div>
+    </div>
+    <div class="twitter clearfix">
+      <div class="box">
+        <div class="birdy">
+          <p>Drop a line</p>
+          <a href="https://twitter.com/rawcodeio">@rawacodeio</a>
+        </div>
+      </div>
+    </div>
+    <div class="github clearfix">
+      <div class="box">
+        <div class="octo">
+          <p>Help us improve</p>
+          <a href="https://github.com/rawcodeio">GitHub/rawcodeio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+<div id="newlistpanel">
+  <form action="/lists/create" method="post" class="wrap">
+    <input id="listname" name="listname" type="text" placeholder="List name" required>
+    <input id="listid" name="listid" type="hidden">
+    <textarea name="listinfo" id="listinfo" cols="37" rows="5" placeholder="Short description, what your list is all about." required></textarea>
+    <div class="form-submit">
+
+      <div class="dropdown-wrap">
+        <div class="currentvalue btn btn-default">Public</div>
+        <div class="dropdown">
+          <ul>
+            <li><a href="#" data-value="Public">Public</a></li>
+            <li><a href="#" data-value="Private">Private</a></li>
+          </ul>
+          <input type="hidden" id="onoffswitch" name="onoffswitch" value="Public">
+        </div>
+      </div>
+
+      <input id="savebtn" value="Save" type="submit" class="btn btn-primary">
+      <a href="#cancelnewlist" id="cancelnewlist">cancel</a>
+    </div>
+  </form>
+</div>
+
+<div id="listpanel">
+  <div class="droparea newlist">
+    <span class="plus"></span>
+    <span>New list</span>
+  </div>
+  <%
+    if(locals.userlists){
+      locals.userlists.forEach(function(element, index){
+  %>
+    <a href="/lists/<%= element._id %>" class="droparea" data-listid="<%= element._id %>">
+      <% if(element.name.length >= 50){ %>
+        <span class="listname"><%= element.name.split(/\s+/,8).join(" "); %>...</span>
+      <% }else{ %>
+        <span class="listname"><%= element.name %></span>
+      <% } %>
+    </a>
+  <%
+      });
+    }
+  %>
+</div>
+
+<div class="globalsearch">
+  <div class="globalsearch-close"></div>
+  <div class="globalsearch-container">
+    <h1>Search all Snippets</h1>
+    <form action="/search" method="post">
+      <input name="searchterm" onfocus="this.value = this.value;" class="center" type="search">
+    </form>
+  </div>
+</div>
+
+
+<% if (locals.bid == "single-snippet"){ %>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js"></script>
+<% } %>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="/js/main.min.js" async></script>
+
+<script>
+  var gaProperty = 'UA-65317701-1';
+  var disableStr = 'ga-disable-' + gaProperty;
+  if (document.cookie.indexOf(disableStr + '=true') > -1) {
+    window[disableStr] = true;
+  }
+  function gaOptout() {
+    document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+    window[disableStr] = true;
+  }
+</script>
+
+<script>
+  (function(r,a,w,c,o,d,e){r['GoogleAnalyticsObject']=o;r[o]=r[o]||function(){
+  (r[o].q=r[o].q||[]).push(arguments)},r[o].l=1*new Date();d=a.createElement(w),
+  e=a.getElementsByTagName(w)[0];d.async=1;d.src=c;e.parentNode.insertBefore(d,e)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create','UA-65317701-1','auto');
+  ga('send','pageview');
+</script>
+
+
+</body>
+</html>

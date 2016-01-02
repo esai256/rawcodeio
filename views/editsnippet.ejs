@@ -1,0 +1,85 @@
+<% include _parts/smallheader %>
+
+</div>
+
+<section class="module cns al-center intro">
+  <h1 class="al-center center">Edit this snippet</h1>
+</section>
+
+<div class="wrap">
+
+
+
+
+  <form name="edit-snippet-form" id="create-snippet-form" method="post" action="/snippets/saveedit/<%= snippet._id %>">
+    <section class="module newcontent">
+
+      <div class="wrap clearfix">
+        <input type="text" id="name" name="name" required value="<%= snippet.name %>"/>
+        <input type="text" id="language" name="language" class="typeahead-lang" placeholder="language" value="<%= snippet.language %>">
+      </div>
+
+<textarea rows="4" cols="50" id="content" name="content">
+<%= snippet.content %>
+</textarea>
+
+    </section>
+
+    <section class="module lowermod">
+<textarea rows="4" cols="50" id="info" name="info" placeholder="Snippetinfo">
+<%= snippet.info %>
+</textarea>
+
+    <div class="bottombar clearfix">
+      <div class="left">
+        <div class="tags clearfix">
+          <span class="tagicon"></span>
+          <span id="taglabel">Tags: </span>
+          <span id="tagspan"><input type="text" id="tags" name="tags" placeholder="Add tags here: CSS, JavaScript, ..." value="<%= snippet.tags %>"/></span>
+        </div>
+      </div>
+
+
+      <div class="right">
+        <div class="rwrap">
+          <div class="dropdown-wrap">
+            <div class="currentvalue btn btn-default">Public</div>
+
+            <div class="dropdown">
+              <ul>
+                <li><a href="#" data-value="Public">Public</a></li>
+                <li><a href="#" data-value="Private">Private</a></li>
+              </ul>
+              <input type="hidden" id="onoffswitch" name="onoffswitch">
+            </div>
+          </div>
+
+          <div class="form-submit clearfix">
+            <input type="submit" id="savebtn" class="btn btn-primary" value="Save" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!--     <div class="bottombar clearfix">
+      <div class="tags clearfix">
+        <span class="tagicon"></span>
+        <span id="taglabel">Tags: </span>
+        <span id="tagspan"><input type="text" id="tags" name="tags" placeholder="Add tags here: CSS, JavaScript, ..." value="<%= snippet.tags %>"/></span>
+
+      </div>
+        <div class="form-submit">
+          <input type="submit" id="savebtn" value="Save" />
+        </div>
+    </div> -->
+
+    </section>
+  </form>
+
+  <form name="delete-snippet-form" id="delete-snippet-form" class="clearfix" method="post" action="/snippets/deletesnippet/<%= snippet._id %>">
+    <input type="submit" id="deletebtn" class="btn btn-red" value="Delete Snippet" />
+  </form>
+</div>
+
+<% include _parts/footer %>

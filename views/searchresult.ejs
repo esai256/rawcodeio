@@ -1,0 +1,53 @@
+<% include _parts/header %>
+
+  <h1 class="intro overview">You searched for</h1>
+  <form action="/search" method="post">
+    <input name="searchterm" type="search" value="<%= searchterm %>" onfocus="this.value = this.value;">
+  </form>
+</div>
+
+  <div class="grid snippets small clearfix">
+    <%
+      result.forEach(function(el, index) {
+    %>
+
+    <div class="item">
+      <div class="inner">
+      <a href="/snippets/<%= el._id %>" class="inneritem">
+      <span class="<%= el.language.toLowerCase() %> lang">
+        <% if(el.language != "undef"){ %>
+          <%= el.language %>
+        <% } %>
+      </span>
+        <h2><%= el.name.length > 20 ? el.name.substr(0, 17)+"..." : el.name %></h2>
+        <p>
+          <% if(el.info) {%>
+            <%= el.info.length > 80 ? el.info.substr(0, 80) + "..." : el.info %>
+          <% } %>
+        </p>
+      </a>
+      </div>
+    </div>
+
+
+
+    <%
+      });
+    %>
+  </div>
+</section>
+
+
+
+
+
+
+
+<% include _parts/footer %>
+
+
+<!--    // id: snippet.id,
+        // name: snippet.name,
+        // content: snippet.content.trim(),
+        // info: snippet.info,
+        // tags: snippet.tags -->

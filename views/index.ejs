@@ -1,0 +1,150 @@
+<% include _parts/header %>
+
+    <h1 class="intro home">The new home for <br> your code snippets</h1>
+    <form action="search" method="post">
+      <input name="searchterm" type="search" onfocus="this.value = this.value;" >
+    </form>
+    <a href="/introduction" class="btn btn-red introbtn">learn more</a>
+  </div>
+
+
+
+
+  <div class="grid snippets small clearfix">
+    <%
+      popularSnippets.forEach(function(el, index) {
+    %>
+
+    <div class="item">
+      <div class="inner">
+      <a href="snippets/<%= el._id %>" class="inneritem">
+      <span class="<%= el.language.toLowerCase() %> lang">
+        <% if(el.language != "undef"){ %>
+          <%= el.language %>
+        <% } %>
+      </span>
+        <h2><%= el.name.length > 20 ? el.name.substr(0, 17)+"..." : el.name %></h2>
+        <p>
+        <% if(el.info) {%>
+          <%= el.info.length > 80 ? el.info.substr(0, 80) + "..." : el.info %>
+        <% } %>
+        </p>
+      </a>
+      </div>
+    </div>
+    <%
+      });
+    %>
+  </div>
+
+
+
+  <a href="/snippets" class="btn btn-default moresnippets">more</a>
+
+  <section class="introgrid">
+    <h2 class="a-center lines">Why store snippets at rawcode?</h2>
+    <div class="grid small features clearfix">
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon coins"></div>
+          <span>No costs</span>
+          <p>
+            Using rawcode and its API is free and we aim to keep it that way.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon search"></div>
+          <span>Powerful search</span>
+          <p>
+           Quick and reliable search, based on Elasticsearch. You choose the scope to search in.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon heart"></div>
+          <span>Built with passion</span>
+          <p>
+            Providing the most awesome place for your snippets is what makes us happy.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon window"></div>
+          <span>Simple workflow</span>
+          <p>
+            Using rawcode is fast, no matter if you prefer to copy and paste or drag'n drop.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon tag"></div>
+          <span>Organize and share</span>
+          <p>
+            Using tags, and lists makes it even easier to find the snippet you’re looking for.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <div class="icon snip"></div>
+          <span>Snip code easily</span>
+          <p>
+            Drag’n Drop, type or via bookmarklet. Saving your code is as easy as finding it.
+          </p>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="inner clearfix">
+          <a href="/documentation/api" class="btn btn-default">API</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <a href="/documentation" class="btn btn-default bold">Read more</a>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inner clearfix">
+          <a href="/license" class="btn btn-default">License</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="module counters">
+    <div class="grid three small clearfix">
+
+      <div class="item">
+        <div class="inner">
+          <span class="counter"><%= usercount %></span>
+          <h3 class="countertype">Users</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="inner">
+          <span class="counter"><%= snippetcount %></span>
+          <h3 class="countertype">Snippets</h3>
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="inner">
+          <span class="counter"><%= listcount %></span>
+          <h3 class="countertype">Lists</h3>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+<% include _parts/footer %>

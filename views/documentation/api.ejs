@@ -1,0 +1,59 @@
+<% include ../_parts/smallheader %>
+
+</div>
+
+<div class="module wrap al-center intro overview">
+  <h1>API</h1>
+</div>
+
+
+<section class="module docs-wrap innerwrap wrap static">
+
+  <div class="cap">
+    <a href="#general" class="sectiona" name="snipets">General information about the API</a>
+    <p>
+      Our API provides you with different return-formats, depending on what you want to use
+      the result of your query for:
+      <ul>
+        <li>JSON</li>
+        <li>HTML</li>
+      </ul>
+    </p>
+    <p>
+      When reutrning HTML we wrap the results in a predefined embeddable format, which you can
+      put directly onto the page, wheras the JSON API simply provides the following format:
+    </p>
+<pre>
+  <code>
+[{
+  "_id":1,
+  "name":"CSS transition",
+  "content":"transition: all 0.2s ease-in-out;",
+  "info":"Animating all properties for 0.2 seconds",
+  "tags":"CSS, transition",
+  "language":"CSS"
+}]
+</code>
+
+</pre>
+  </div>
+
+  <div class="cap">
+    <a href="#getsnippets" class="sectiona" name="snipets">GET snippets for user</a>
+    <p>Currently in development.</p>
+  </div>
+
+  <div class="cap">
+    <a href="#getlists" class="sectiona" name="snipets">GET lists for user</a>
+    <p>Currently in development.</p>
+  </div>
+
+  <div class="cap">
+    <a href="#search" class="sectiona" name="snipets">GET Search</a>
+    <p>Currently in development.</p>
+  </div>
+
+
+</section>
+
+<% include ../_parts/footer %>

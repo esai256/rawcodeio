@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>rawcode</title>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Rawcode Snippet Search">
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"> -->
+  <link rel="stylesheet" href="/css/hljs/zenburn.css">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/colors.css">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<%
+var bodyclass = "";
+if (locals.user){
+  bodyclass = "loggedin";
+}
+%>
+<%
+if (locals.bid){
+%>
+<body class="<%= bodyclass %> <%= bid %>">
+<% } else { %>
+<body class="<%= bodyclass %>">
+<% } %>
+  <div class="notification clearfix">
+    <div class="icon"></div>
+    <div class="msg"></div>
+  </div>
+
+  <div id="overlay"></div>
+  <div id="newlistpanel">
+    <form action="/lists/create" method="post">
+      <input id="listname" name="listname" type="text" placeholder="List name">
+      <input id="listid" name="listid" type="hidden">
+      <textarea name="listinfo" id="listinfo" cols="37" rows="5" placeholder="Short description, what your list is all about."></textarea>
+      <div class="form-submit">
+        <input id="savebtn" value="Save" type="submit">
+        <a href="#cancelnewlist" id="cancelnewlist">cancel</a>
+      </div>
+    </form>
+  </div>
+
+  <div id="listpanel" class="">
+    <div class="droparea newlist">
+      <span class="plus"></span>
+      <span>New list</span>
+    </div>
+    <%
+
+      if(locals.lists){
+        locals.lists.forEach(function(element, index){
+
+    %>
+      <a href="/lists/<%= element._id %>" class="droparea" data-listid="<%= element._id %>">
+        <span class="listname"><%= element.name %></span>
+        <!-- <span class="listamount"><%= locals.lists.length %> snippets</span> -->
+      </a>
+    <%
+        });
+      }
+    %>
+  </div>
+
+
+  <div id="pagewrap">
+    <div class="underlay"></div>
+    <div id="header" class="">
+      <div class="middle clearfix">
+        <div class="logo">
+          <a href="/">rawcode</a>
+        </div>
+
+        <% if (locals.user){ %>
+
+          <div class="menubtn"></div>
+
+          <div class="avatar">
+            <a href="/users/<%= locals.user._id %>/<%= locals.user.username %>">
+              <% if(!locals.user.userimage){ %>
+              <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+              <% } else { %>
+              <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+              <% } %>
+            </a>
+            <div class="usermenu">
+              <ul>
+                <li><a href="/users/<%= locals.user._id %>/<%= locals.user.username %>">Your Profile</a></li>
+                <li><a href="/users/<%= locals.user._id %>/<%= locals.user.username %>/edit">Settings</a></li>
+                <%if(!locals.newsamount > 0) {%>
+                  <li><a href="/newstuff" class="newsnoti">News</a></li>
+                <% } else {%>
+                  <li><a href="/newstuff" class="newsnoti">News <span><%= locals.newsamount %></span></a></li>
+                <% }%>
+                <li class="seperator"></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+
+        <% } else { %>
+
+          <a href="/login" class="loginbtn">
+            login
+          </a>
+
+
+        <% } %>
+
+        <nav class="topnav">
+          <ul>
+            <li class="newsnipli"><a href="/snippets/create" tabindex="1">New</a></li>
+            <li><a href="/snippets" tabindex="2">Snippets</a></li>
+            <!-- <li><a href="/users" tabindex="3">Users</a></li> -->
+            <li><a href="/lists" tabindex="4">Lists</a></li>
+          </ul>
+        </nav>
+
+        <div id="menubtn">
+        </div>
+        <div id="pushnav">
+
+          <% if (locals.user){ %>
+
+            <div id="pushuser" class="clearfix">
+              <div class="menubtn"></div>
+
+              <div class="avatar">
+                <a href="/users/<%= locals.user._id %>/<%= locals.user.username %>">
+                  <% if(!locals.user.userimage){ %>
+                  <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+                  <% } else { %>
+                  <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+                  <% } %>
+                </a>
+              </div>
+            </div>
+
+          <% } else { %>
+
+          <a href="/login" class="button pushloginbtn">
+            login
+          </a>
+
+          <% } %>
+          <ul>
+            <li class="newsnipli"><a href="/snippets/create">New</a></li>
+            <li><a href="/snippets">Snippets</a></li>
+            <li><a href="/users">users</a></li>
+            <li><a href="/lists">lists</a></li>
+          </ul>
+        </div>
+
+      </div>

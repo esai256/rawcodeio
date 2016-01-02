@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="bI6tJvIWpXldMc5qgyyJQpsn287nDxfrztJ6TZ_Vsho" />
+  <% if(locals.name){ %><title><%= name %> — rawcode</title><% }else{ %><title>rawcode</title><% } %>
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Rawcode Snippet Search">
+  <link rel="stylesheet" href="/css/main.min.css">
+  <meta property="og:title" content="rawcode" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://rawcode.io" />
+  <meta property="og:description" content="rawcode is a place to find and store code snippets." />
+  <meta property="og:site_name" content="rawcode.io" />
+  <meta property='og:image' content='https://rawcode.io/rawcode.png'>
+  <meta property='twitter:site' content='@rawcodeio'>
+  <meta property='twitter:card' content='summary'>
+</head>
+
+<%
+var bodyclass = "";
+if (locals.user){
+  bodyclass = "loggedin";
+}
+%>
+<%
+if (locals.bid){
+%>
+<body class="<%= bodyclass %> <%= bid %>">
+<% } else { %>
+<body class="<%= bodyclass %>">
+<% } %>
+  <div class="notification clearfix">
+    <div class="icon"></div>
+    <div class="msg"></div>
+  </div>
+
+  <div id="pagewrap">
+      <div class="headerarea">
+        <div id="nav">
+          <div class="wrap">
+            <a href="/" id="logo"></a>
+            <% if(locals.user){ %>
+              <div class="menubtn">
+                <div class="menubtnwrap">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="avatar">
+                <a href="/users/<%= locals.user._id %>/<%= locals.user.username %>">
+                  <% if(!locals.user.userimage){ %>
+                  <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+                  <% } else { %>
+                  <div class="headerusrimg" style="background-image: url(<%= locals.user.userimage %>);"></div>
+                  <% } %>
+                </a>
+                <div class="usermenu">
+                  <ul>
+                    <li><a href="/users/<%= locals.user._id %>/<%= locals.user.username %>">Your Profile</a></li>
+                    <li><a href="/users/<%= locals.user._id %>/<%= locals.user.username %>/edit">Settings</a></li>
+                    <%if(!locals.newsamount > 0) {%>
+                      <li><a href="/newstuff" class="newsnoti">News</a></li>
+                    <% } else {%>
+                      <li><a href="/newstuff" class="newsnoti">News <span><%= locals.newsamount %></span></a></li>
+                    <% }%>
+                    <li class="seperator"></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            <% } %>
+
+            <ul id="mainmenu">
+              <li><a href="/snippets/create" class="newsnip">New</a></li>
+              <li><a href="/snippets">Snippets</a></li>
+              <li><a href="/lists">Lists</a></li>
+              <% if(!locals.user){ %>
+              <li><a href="/login" class="btn btn-primary loginbtn">Login</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+
+

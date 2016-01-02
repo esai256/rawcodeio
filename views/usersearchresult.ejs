@@ -1,0 +1,26 @@
+<% include _parts/header %>
+
+<section class="module searchresults">
+  <div class="searchterm frontsearch middle center">
+    <h1>You searched for</h1>
+    <form action="/searchuser" method="post">
+      <input name="searchterm" type="search" value="<%= searchterm %>">
+    </form>    
+  </div>
+  <div class="seperator"></div>
+  <div class="grid three middle clearfix">
+    <% result.forEach(function(el, index) { %>
+    <div class="item user">
+      <a href="users/<%= el._id %>" class="inneritem clearfix">
+      <div class="img" style="background: url('<%= el.userimage %>') no-repeat center"></div>
+        <div class="addinfo">
+          <h3><%= el.username %></h3>
+          <div class="additional">joined: <br>  <%= el.created.toISOString().replace('T', ' ').substr(0, 19) %></div>
+        </div>
+      </a>
+    </div>
+    <% }); %>
+  </div>
+</section>
+
+<% include _parts/footer %>

@@ -1,0 +1,29 @@
+<div class="well">
+  <form id="uploadForm" enctype="multipart/form-data" action="/users/savesettings" method="post">
+    <div>
+      <label for="username">Username</label><input id="username" name="username" type="text" value="<%= userprofile.username %>">
+    </div>
+    <div>
+      <label for="useremail">E-Mail</label><input id="useremail" name="useremail" type="text" value="<%= userprofile.email %>">
+    </div>
+    <br>
+    <div>
+      <input type="password" id="autofill" name="autofill" value="" style="display: none !important;">
+      <label for="newpass">New Password</label><input id="newpass" name="newpass" type="password" value="">
+    </div>
+    <div>
+      <label for="confirmpass">Confirm Password</label><input id="confirmpass" name="confirmpass" type="password" value="">
+    </div>
+    <br>
+
+    <label for="avaupload">Upload new picture</label>
+    <div class="avaupload">
+      <span>Click to upload</span>
+      <input type="file" name="userimg"/>
+    </div>
+
+    <br><br>
+
+    <input type="submit" id="savechanges" value="Save" class="btn btn-primary">
+  </form>
+</div>

@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'dejavusansmono';
+  src: url('../snippetfonts/dejavusansmono.eot'); /* IE9 Compat Modes */
+  src: url('../snippetfonts/dejavusansmono.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../snippetfonts/dejavusansmono.woff') format('woff'), /* Modern Browsers */
+       url('../snippetfonts/dejavusansmono.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../snippetfonts/dejavusansmono.svg#4ffe771a29b891bc8a668deb85ee3a60') format('svg'); /* Legacy iOS */
+
+  font-style:   normal;
+  font-weight:  400;
+}
+
+code{
+  font-family: "dejavusansmono" !important;
+}

@@ -1,0 +1,21 @@
+<div class="well">
+<div class="importgithub">
+    <div class="octocat"></div>
+    <p class="explainimport">
+      Import all your gists form GitHub with just one click. <br>
+      Your private Gists will be transformed into private  <br>
+      snippets and public Gists stay public here as well.
+      <br><br>
+      <span>Your credentials will not be stored by us.</span>
+    </p>
+    <form action="/snippets/importgithub" method="post">
+      <input type="text" id="githubusername" name="githubusername" placeholder="GitHub username">
+      <input type="password" id="githubpw" name="githubpw" placeholder="GitHub password">
+      <input type="submit" value="import from GitHub" class="confirmbtn btn btn-primary">
+      <!-- <p style="color: #ccc; font-size: 14px; max-width:300px; margin-top: 10px;">We're currently running into some issues and working to bring the importer back soon.</p> -->
+      <div class="spinner">
+        Loading…
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,62 @@
+<% include _parts/smallheader %>
+</div>
+
+<section class="module cns al-center intro">
+  <h1 class="al-center center">Create a new snippet</h1>
+</section>
+
+<div class="wrap">
+
+<form name="create-snippet-form" id="create-snippet-form" method="post" action="/snippets/create">
+  <section class="module newcontent">
+    <div class="wrap clearfix">
+      <input type="text" id="name" name="name" required placeholder="Name your snippet" />
+      <input type="text" id="language" name="language" class="typeahead-lang" placeholder="Language">
+    </div>
+
+    <textarea rows="4" cols="50" id="content" name="content"></textarea>
+
+  </section>
+  <section class="module newinfo">
+    <textarea rows="4" cols="50" id="info" name="info" placeholder="Add some info about your snippet (optional)"></textarea>
+
+
+    <div class="bottombar clearfix">
+      <div class="left">
+        <div class="tags clearfix">
+          <span class="tagicon"></span>
+          <span id="taglabel">Tags: </span>
+          <span id="tagspan"><input type="text" id="tags" name="tags" placeholder="Add tags here: CSS, JavaScript, ..."/></span>
+        </div>
+      </div>
+
+
+      <div class="right">
+        <div class="rwrap">
+          <div class="dropdown-wrap">
+            <div class="currentvalue btn btn-default">Public</div>
+            <div class="dropdown">
+              <ul>
+                <li><a href="#" data-value="Public">Public</a></li>
+                <li><a href="#" data-value="Private">Private</a></li>
+              </ul>
+              <input type="hidden" id="onoffswitch" name="onoffswitch" value="Public">
+            </div>
+          </div>
+
+          <div class="form-submit clearfix">
+            <input type="submit" id="savebtn" class="btn btn-primary" value="Save" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="wrap clearfix">
+        <div class="createinfo">By creating a snippet you agree <br>to our <a href="/terms">terms</a> and <a href="/license">license</a>.</div>
+      </div>
+    </section>
+</form>
+
+</div>
+<% include _parts/footer %>

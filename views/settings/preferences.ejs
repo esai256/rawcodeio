@@ -1,0 +1,88 @@
+<form action="/users/savepref" method="post">
+  <div class="prefbox">
+    <h3>Syntax highlighting</h3>
+    <select name="syntaxselect" id="syntaxselect">
+      <option value="zenburn">Zenburn (default)</option>
+      <option value="agate">agate</option>
+      <option value="androidstudio">androidstudio</option>
+      <option value="arta">arta</option>
+      <option value="ascetic">ascetic</option>
+      <option value="brown_paper">brown_paper</option>
+      <option value="brown_papersq">brown_papersq</option>
+      <option value="codepen-embed">codepen-embed</option>
+      <option value="color-brewer">color-brewer</option>
+      <option value="dark">dark</option>
+      <option value="darkula">darkula</option>
+      <option value="default">default</option>
+      <option value="docco">docco</option>
+      <option value="far">far</option>
+      <option value="foundation">foundation</option>
+      <option value="github-gist">github-gist</option>
+      <option value="github">github</option>
+      <option value="googlecode">googlecode</option>
+      <option value="grayscale">grayscale</option>
+      <option value="hopscotch">hopscotch</option>
+      <option value="hybrid">hybrid</option>
+      <option value="idea">idea</option>
+      <option value="ir_black">ir_black</option>
+      <option value="kimbie.dark">kimbie.dark</option>
+      <option value="kimbie.light">kimbie.light</option>
+      <option value="magula">magula</option>
+      <option value="mono-blue">mono-blue</option>
+      <option value="monokai_sublime">monokai_sublime</option>
+      <option value="monokai">monokai</option>
+      <option value="obsidian">obsidian</option>
+      <option value="paraiso.dark">paraiso.dark</option>
+      <option value="paraiso.light">paraiso.light</option>
+      <option value="pojoaque">pojoaque</option>
+      <option value="pojoaque">pojoaque</option>
+      <option value="railscasts">railscasts</option>
+      <option value="rainbow">rainbow</option>
+      <option value="school_book">school_book</option>
+      <option value="school_book">school_book</option>
+      <option value="solarized_dark">solarized_dark</option>
+      <option value="solarized_light">solarized_light</option>
+      <option value="sunburst">sunburst</option>
+      <option value="tomorrow-night-blue">tomorrow-night-blue</option>
+      <option value="tomorrow-night-bright">tomorrow-night-bright</option>
+      <option value="tomorrow-night-eighties">tomorrow-night-eighties</option>
+      <option value="tomorrow-night">tomorrow-night</option>
+      <option value="tomorrow">tomorrow</option>
+      <option value="vs">vs</option>
+      <option value="xcode">xcode</option>
+    </select>
+  </div>
+
+  <div class="prefbox">
+    <h3>Fonts</h3>
+    <select name="fontselect" id="fontselect">
+      <option value="monospace">Monospace (default)</option>
+      <option value="monaco">Monaco</option>
+      <option value="inconsolata">Inconsolata</option>
+      <option value="dejavusansmono">Deja Vu Mono</option>
+      <option value="droidsansmono">Droid Sans Mono</option>
+    </select>
+
+    <select name="fontsize" id="fontsize">
+      <option value="10">10px</option>
+      <option value="11">11px</option>
+      <option value="12">12px</option>
+      <option value="13">13px</option>
+      <option value="14">14px</option>
+      <option value="15">15px</option>
+      <option value="16">16px</option>
+    </select>
+  </div>
+
+  <div class="setting-example">
+  <pre class="snippet">
+  <code class="hljs css">
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  </code>
+  </pre>
+  </div>
+  <input type="submit" value="Save" class="btn btn-primary" id="saveprefbtn">
+</form>

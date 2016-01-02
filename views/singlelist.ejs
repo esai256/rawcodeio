@@ -1,0 +1,79 @@
+<% include _parts/header %>
+
+  <div class="listhead clearfix">
+    <div class="listicon"></div>
+      <% if(list.name.length >= 50){ %>
+        <h1><%= list.name.split(/\s+/,8).join(" "); %>...</h1>
+      <% }else{ %>
+        <h1><%= list.name %></h1>
+      <% } %>
+  </div>
+
+<div class="listsearch">
+  <form action="/searchlist/<%= list._id %>" method="post">
+    <input name="searchterm" type="search" placeholder="Search for a snippet in this list...">
+  </form>
+</div>
+<% if(creator == currentUserid){ %>
+  <form action="/editlist/<%= list._id %>" method="post" id="editlistform">
+    <input type="hidden" id="curruserid" name="curruserid" value="<%= currentUserid %>">
+    <input name="edit" type="submit" value="Edit this list" id="editlist">
+  </form>
+<% } %>
+
+</div>
+
+<div class="grid snippets small clearfix">
+
+<div class="item listinfos">
+  <div class="inner">
+    <a href="#listinfos">
+      <h2><%= list.name %></h2>
+      <p><%= list.info %></p>
+      <span>more</span>
+    </a>
+  </div>
+</div>
+
+  <%
+    snippets.forEach(function(el, index) {
+      if(el != undefined){ // Wenn undefined = snippet gelöscht, referenz besteht.
+  %>
+
+  <div class="item">
+    <div class="inner">
+    <a href="/snippets/<%= el._id %>" class="inneritem">
+    <span class="<%= el.language.toLowerCase() %> lang">
+      <% if(el.language != "undef"){ %>
+        <%= el.language %>
+      <% } %>
+    </span>
+      <h2><%= el.name %></h2>
+      <p>
+        <% if(el.info) {%>
+          <%= el.info.split(/\s+/,10).join(" "); %> ...
+        <% } %>
+      </p>
+
+    </a>
+    </div>
+  </div>
+
+  <%
+    }
+  });
+  %>
+
+</div>
+
+
+<div class="listinfo-overlay">
+  <div class="listinfo-overlay-close"></div>
+  <div class="listinfo-overlay-container">
+    <h2><%= list.name %></h2>
+    <p><%= list.info %></p>
+    <div class="amount">Snippets in this list: <%= snippets.length %></div>
+  </div>
+</div>
+
+<% include _parts/footer %>

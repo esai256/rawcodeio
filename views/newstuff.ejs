@@ -1,0 +1,36 @@
+<% include _parts/smallheader %>
+
+<section class="module heading clearfix">
+  <div class="innerwrap wrap clearfix">
+    <h1>While you were gone...</h1>
+  </div>
+</section>
+
+<section class="module newsmodule wrap">
+  <% if(latest.length == 1) {%>
+    <h2>There is <span class="cntr"><%= latest.length %></span> new thing since your last visit.</h2>
+  <% } else {%>
+    <h2>There are <span class="cntr"><%= latest.length %></span> new things since your last visit.</h2>
+  <% } %>
+
+
+
+  <ul>
+
+    <%
+      news.forEach(function(el, index) {
+    %>
+
+    <li>
+      <span class="releasedate"><%= el.created.toISOString().replace('T', ' ').substr(0, 10) %>
+      </span> <%= el.content %>
+    </li>
+
+    <%
+      });
+    %>
+
+  </ul>
+</section>
+
+<% include _parts/footer %>

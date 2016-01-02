@@ -1,0 +1,21 @@
+<% include _parts/smallheader %>
+
+<div class="four-o-four">
+  <section class="module intro">
+    <h1 class="middle center al-center">404</h1>
+  </section>
+  <section class="error-log">
+    <h2 class="al-center center">Reason for this error</h2>
+    <div class="error-message">
+    <% if(message){ %>
+      <%= message %>
+    <% } else{ %>
+      Ooops, something went wrong! The page you are looking for no longer exsts. <br>
+      If you think this is a bug, let us know.
+    <% } %>
+    </div>
+    <a href="https://github.com/rawcodeio/Bug-Report" class="btn btn-red introbtn">Report this error</a>
+  </section>
+</div>
+
+<% include _parts/footer %>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+  <ShortName>rawcode</ShortName>
+  <LongName>rawcode Search</LongName>
+  <Description>Search all the snippets on rawcode</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <OutputEncoding>UTF-8</OutputEncoding>
+  <AdultContent>false</AdultContent>
+  <Language>en-us</Language>
+  <Developer>Ben Mann</Developer>
+  <Contact>hi@rawcode.io</Contact>
+  <Tags>code snippets codesnippets</Tags>
+  <Attribution>Search snippets on rawcode http://rawcode.io</Attribution>
+  <SyndicationRight>open</SyndicationRight>
+  <Query role="example" searchTerms="CSS transition"/>
+  <Image height="16" width="16" type="image/vnd.microsoft.icon">http://rawcode.io/favicon.ico</Image>
+  <Image height="64" width="64" type="image/png">http://rawcode.io/img/opensearch.png</Image>
+  <Url type="text/html" template="http://rawcode.io/search/{searchTerms}">
+</OpenSearchDescription>

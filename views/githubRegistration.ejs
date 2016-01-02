@@ -1,0 +1,53 @@
+<% include _parts/smallheader %>
+
+<% if(error){ %>
+  <span class="login-error"><%= error %></span>
+<% } %>
+
+
+<div class="grid two clearfix loginforms smallwrap">
+
+  <div class="item bright githubregister clearfix">
+    <div class="inneritem">
+      <h2 class="register-heading">You're almost done</h2>
+      <form name="registerform" id="registerform" method="post" action="/registergithub">
+
+        <h3>Username</h3>
+        <input type="text" id="username" name="username" required value="<%= username %>"/>
+        <div class="hint">make sure it's url-friendly - or we do</div>
+
+        <h3>E-Mail</h3>
+        <input type="email" id="email" name="email" required/>
+        <input type="email" id="email-retype" name="emailretype" required placeholder="Re-Type E-Mail"/>
+        <div class="hint">just needed for login - no spam</div>
+
+        <h3>Password</h3>
+        <input type="password" id="password" name="password" autocomplete="off" required />
+        <div class="hint">anything but your mom’s birthday</div>
+
+        <input type="hidden" value="<%= githubid %>" id="githubid" name="githubid">
+        <input type="hidden" value="<%= userimage %>" id="userimage" name="userimage">
+
+        <input type="submit" value="Register"class="btn btn-primary"/>
+      </form>
+    </div>
+  </div>
+
+  <div class="item githubloginpart clearfix">
+    <div class="inneritem">
+    <img src="<%= userimage %>"  width="80" height="80" alt="GitHub Avatar">
+    <img src="/img/github_login.png"  width="50" height="50" alt="GitHub Avatar">
+      <p>
+        Hey <%= username %> this is your first time logging in with GitHub. <br><br>
+        Just provide us with a password and an E-mail address on the left, in case you ever need
+        to log into rawcode without using GitHub. We will pre-fill your account with your infos
+        from GitHub and any following logins will be just one click.
+        <span class="important">If you already have an account registered on rawcode, you can link it to your GitHub account under settings > account!</span>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<% include _parts/footer %>

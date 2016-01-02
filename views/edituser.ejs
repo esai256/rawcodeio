@@ -1,0 +1,85 @@
+<% include _parts/smallheader %>
+
+
+
+<section class="module userinfo clearfix wrap">
+
+
+  <% if(locals.user && !locals.user.userimage){ %>
+    <div class="useravatar">
+      <img src="/img/default.png" alt="<%= userprofile.username %>" height="100" width="auto">
+    </div>
+  <% } else { %>
+    <div class="useravatar">
+      <img src="<%= userprofile.userimage %>" alt="<%= userprofile.username %>" height="100" width="auto">
+    </div>
+  <% } %>
+  <div class="info">
+    <div class="infocontent">
+      <div class="name">
+        <%= userprofile.username %>
+
+        <% if(userprofile.id == currentUser){ %>
+        <span id="canedit"><a href="/users/<%= userprofile.id + "/" + userprofile.username %>/edit" >edit</a></span>
+        <% } %>
+      </div>
+      <div class="mail"><%= userprofile.email %></div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="module userinfo clearfix wrap edituser">
+<div class="seperator left"></div>
+<div class="leftside">
+  <div class="usersettingsmenu">
+    <ul>
+      <li><a href="#profile" class="active">Profile</a></li>
+      <li><a href="#preferences">Preferences</a></li>
+      <li><a href="#linkgithub">Account</a></li>
+      <li><a href="#import">Import</a></li>
+      <li><a href="#api">API</a></li>
+      <li><a href="#delete">Delete</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="rightside">
+  <div class="settings-profile active">
+    <% include settings/profile %>
+  </div>
+
+  <div class="settings-preferences">
+    <% include settings/preferences %>
+  </div>
+
+  <div class="settings-linkgithub">
+    <% include settings/linkgithub %>
+  </div>
+
+  <div class="settings-import">
+    <% include settings/import %>
+  </div>
+
+  <div class="settings-mail">
+    <% include settings/mail %>
+  </div>
+
+  <div class="settings-api">
+    <% include settings/api %>
+  </div>
+
+  <div class="settings-delete">
+    <% include settings/delete %>
+  </div>
+</div>
+
+
+</section>
+
+
+
+
+
+<% include _parts/footer %>

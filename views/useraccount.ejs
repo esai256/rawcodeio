@@ -1,0 +1,111 @@
+<% include _parts/smallheader %>
+
+
+
+<section class="module userinfo clearfix wrap">
+
+  <% if(locals.user && !locals.user.userimage){ %>
+    <div class="useravatar">
+      <img src="/img/default.png" alt="<%= userprofile.username %>" height="100" width="auto">
+    </div>
+  <% } else { %>
+    <div class="useravatar">
+      <img src="<%= userprofile.userimage %>" alt="<%= userprofile.username %>" height="100" width="auto">
+    </div>
+  <% } %>
+  <div class="info">
+    <div class="infocontent">
+      <div class="name">
+        <%= userprofile.username %>
+      </div>
+      <div class="addinfos"><%= snippets.length %> snippets</div>
+    </div>
+  </div>
+
+</section>
+
+<div class="usersearch wrap singleuserpage clearfix">
+  <form action="/search/<%= userprofile.id %>" method="post" class="clearfix">
+    <input name="searchterm" type="search" placeholder="Search <%= userprofile.username %>'s snippets ...">
+    <input type="hidden" id="searchtype" name="searchtype" value="pubsnippets">
+    <div class="selectcontent clearfix">
+      <a href="/api/snippets/<%= userprofile.id %>" id="getsnippets" class="active btn btn-default">Snippets</a>
+      <a href="/api/lists/<%= userprofile.id %>" id="getlists" class="btn btn-default">Lists</a>
+    <% if(locals.user && locals.user.id == userViewsID){ %>
+      <div class="dropdown-wrap" id="getpubpriv">
+        <div class="currentvalue btn btn-default">Public</div>
+        <div class="dropdown">
+          <ul>
+            <li><a href="#" data-value="Public" class="switch">Public</a></li>
+            <li><a href="#" data-value="Private" class="switch">Private</a></li>
+          </ul>
+          <input type="hidden" id="onoffswitch" name="onoffswitch">
+        </div>
+      </div>
+    <% } %>
+
+
+
+    </div>
+  </form>
+</div>
+
+</div>
+
+<div class="grid snippets small clearfix useracco">
+
+    <% if(!snippets.length >= 1){ %>
+
+      <div class="nosnippets">
+        <h2>Welcome to rawcode! 🎉</h2>
+        <p>
+          This is your profile, where you can find all your public and private snippets and lists.
+          Looks like you don't have any yet...
+          Why don't you start by importing your Gists from GitHub or create some new snippets? <span class="keys">(alt + n)</span>
+        </p>
+        <div class="gtdocs">
+          If you'd like to know a little more about rawcode <a href="/documentation">check out the docs.</a><br>
+        </div>
+      </div>
+
+    <% } %>
+
+
+    <%
+      snippets.forEach(function(el, index) {
+    %>
+
+
+
+
+    <% if(!el.public) var pub = "private"; %>
+    <div class="item <%= pub %>">
+      <div class="inner">
+      <a href="/snippets/<%= el._id %>" class="inneritem">
+      <span class="<%= el.language.toLowerCase() %> lang">
+        <% if(el.language != "undef"){ %>
+          <%= el.language %>
+        <% } %>
+      </span>
+        <h2><%= el.name.length > 20 ? el.name.substr(0, 17)+"..." : el.name %></h2>
+        <p>
+          <% if(el.info) {%>
+            <%= el.info.length > 80 ? el.info.substr(0, 80) + "..." : el.info %>
+          <% } %>
+        </p>
+
+      </a>
+      </div>
+    </div>
+
+
+
+    <%
+      });
+    %>
+
+</div>
+
+
+
+<% include _parts/footer %>

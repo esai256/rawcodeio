@@ -1,0 +1,62 @@
+<% include _parts/header %>
+
+<section class="module snippetname">
+  <div class="middle center listhead">
+    <div class="listicon"></div>
+    <% if(list.name.length >= 50){ %>
+      <h1><%= list.name.split(/\s+/,8).join(" "); %>...</h1>
+    <% }else{ %>
+      <h1><%= list.name %></h1>
+    <% } %>
+
+  <form name="delete-list-form" id="delete-list-form" class="clearfix" method="post" action="/lists/deletelist/<%= list._id %>">
+    <input type="submit" id="deletebtn" value="Delete List" />
+  </form>
+
+  </div>
+</section>
+</div>
+
+
+<div class="seperator"></div>
+
+<section class="module midle userssnippets">
+    <div class="grid snippets small clearfix">
+
+    <%
+      snippets.forEach(function(el, index) {
+        if(el != undefined){ // Wenn undefined = snippet gelöscht, referenz besteht.
+    %>
+
+
+     <div class="item">
+     <form name="delete-snipfromlist-form" class="delete-snipfromlist-form clearfix" method="post" action="/lists/deletesnippetfromlist/<%= list._id %>/<%= el._id %>">
+        <input type="submit" class="delete" value="" />
+      </form>
+      <div class="inner">
+      <a href="/snippets/<%= el._id %>" class="inneritem">
+      <span class="<%= el.language.toLowerCase() %> lang">
+        <% if(el.language != "undef"){ %>
+          <%= el.language %>
+        <% } %>
+      </span>
+        <h2><%= el.name %></h2>
+        <p>
+          <% if(el.info) {%>
+            <%= el.info.split(/\s+/,10).join(" "); %> ...
+          <% } %>
+        </p>
+      </a>
+      </div>
+    </div>
+
+    <%
+      }
+    });
+    %>
+
+  </div>
+</section>
+
+
+<% include _parts/footer %>

@@ -1,0 +1,22 @@
+<div class="well">
+  <div class="apitokeninfo">
+    <p>
+      When interacting with our API you'll need an API token that you pass in the URL.
+      Because that is rather unsafe, in case you ever share a URL that includes the token, you can choose between two.
+      One of them is linked to your account but <b>can only acces your public snippets.</b>
+    </p>
+    <p>
+      The other token has <b>complete API access</b>, even to your private snippets. That said, you
+      should never share it with anybody.
+    </p>
+  </div>
+
+  <div class="token">
+    <h3><span>Public</span> API token</h3>
+    <div class="apitoken"><%= userprofile.token %></div>
+  </div>
+  <div class="token private">
+    <h3><span>Private</span> API token</h3>
+    <div class="apitoken private"><%= userprofile.privatetoken %></div>
+  </div>
+</div>

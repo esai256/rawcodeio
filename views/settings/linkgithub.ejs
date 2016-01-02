@@ -1,0 +1,21 @@
+<div class="well">
+<div class="linkgithub">
+  <img src="/img/github_login.png" width="100" height="100" alt="">
+  <h3>Link your account to GitHub</h3>
+  <p>
+    By linking your GitHub profile to your account on rawcode you can login with
+    one click, in case you're already signed in with GitHub. We don't store any data
+    or snippets, apart from your GitHub ID. Importing snippets is still a separate step.
+  </p>
+  <% if(user.githubid){ %>
+    <p class="alrdylinked">Your account is already linked to GitHub!</p>
+  <% }else{ %>
+    <form action="/linktogithub" method="post" id="linkgithubform">
+      <input type="text" id="githubusername" name="githubusername" placeholder="GitHub username">
+      <input type="password" id="githubpw" name="githubpw" placeholder="GitHub password">
+      <input type="submit" value="Link to GitHub" class="confirmbtn btn btn-primary">
+    </form>
+  <% } %>
+
+  </div>
+</div>

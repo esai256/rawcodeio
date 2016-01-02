@@ -1,0 +1,44 @@
+<% include _parts/header %>
+
+
+
+<section class="module middle center intro overview">
+  <h1>Search all <span class="accent">users</span></h1>
+  <h2>There are <span><%= count %></span> registered users</h2>
+</section>
+
+<section class="module frontsearch">
+  <form action="/searchuser" method="post">
+    <input name="searchterm" type="search">
+  </form>
+</section>
+
+</div>
+
+    <section class="module popular">
+      <div class="grid three middle clearfix">
+
+        <%
+          allUsers.forEach(function(el, index) {
+        %>
+
+        <div class="item user">
+          <a href="users/<%= el._id %>" class="inneritem clearfix">
+          <div class="img" style="background: url('<%= el.userimage %>') no-repeat center"></div>
+            <div class="addinfo">
+              <h3><%= el.username %></h3>
+              <div class="additional">joined: <br>  <%= el.created.toISOString().replace('T', ' ').substr(0, 19) %></div>
+            </div>
+          </a>
+        </div>
+
+        <%    
+          });
+        %>
+
+        </div>
+    </section>
+
+
+
+<% include _parts/footer %>

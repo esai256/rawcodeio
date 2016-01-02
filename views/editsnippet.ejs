@@ -43,8 +43,11 @@
       <div class="right">
         <div class="rwrap">
           <div class="dropdown-wrap">
-            <div class="currentvalue btn btn-default">Public</div>
-
+            <% if(snippet.public) { %>
+              <div class="currentvalue btn btn-default">Public</div>
+            <% }else { %>
+              <div class="currentvalue btn btn-default">Private</div>
+            <% } %>
             <div class="dropdown">
               <ul>
                 <li><a href="#" data-value="Public">Public</a></li>

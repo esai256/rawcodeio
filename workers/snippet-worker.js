@@ -47,12 +47,16 @@ exports.addSnippet = function(snippet, userid, next) {
         github: {username: githubname, url: githubURL}
       });
 
+  if(newSnippet.content.replace(/\s+/g, '').trim().length > 0) {
    newSnippet.save(function(err) {
     if (err) {
         return next(err);
       }
       next();
     });
+  }else {
+    return next(new Error('Snippet has no actual characters.'));
+  }
 
 }; // addSnippet ende
 
@@ -82,15 +86,18 @@ exports.saveEditedSnippet = function(snippetid, snippet, callback) {
   var query = {"_id": snippetid};
   var update = {"name": snippet.name, "content": snippet.content, "info": snippet.info, "tags": snippet.tags, "language" : snippet.language, "public": pub, "github": {username: githubname, url: githubURL}};
 
-
-  Snippet.findOneAndUpdate(query, update, function(err, edit) {
-    if (err) {
-      console.log('got an error');
-    }
-    indexUpdatedSnippet(snippetid);
+  if(newSnippet.content.replace(/\s+/g, '').trim().length > 0) {
+    Snippet.findOneAndUpdate(query, update, function(err, edit) {
+      if (err) {
+        console.log('got an error');
+      }
+      indexUpdatedSnippet(snippetid);
+      callback("success");
+    });
+  }else {
+    console.log('no actual content in edited. not saving');
     callback("success");
-  });
-
+  }
 
 }; // saveEditedSnippet ende
 
@@ -632,8 +639,3 @@ exports.recentPagedSnippets = function(pageid, count, callback) {
   });
 
 }
-
-
-
-
-

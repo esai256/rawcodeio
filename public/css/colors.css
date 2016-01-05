@@ -1,520 +1,520 @@
 .inneritem .text,
-.singletag.text{
+.singletag.singletag_text{
   background-color: #009DCD;
 }
 .inneritem .html,
-.singletag.html{
+.singletag.singletag_html{
   background-color: #77D3FB;
 }
 .inneritem .htaccess,
-.singletag.htaccess{
+.singletag.singletag_htaccess{
   background-color: #92D6C9;
 }
 .inneritem .onec,
-.singletag.onec{
+.singletag.singletag_onec{
   background-color: #473c8b;
 }
 .inneritem .actionscript,
-.singletag.actionscript{
+.singletag.singletag_actionscript{
   background-color: #836fff;
 }
 .inneritem .apache,
-.singletag.apache{
+.singletag.singletag_apache{
   background-color: #ccc;
 }
 .inneritem .applescript,
-.singletag.applescript{
+.singletag.singletag_applescript{
   background-color: #191970;
 }
 .inneritem .armasm,
-.singletag.armasm{
+.singletag.singletag_armasm{
   background-color: #ab82ff;
 }
 .inneritem .asciidoc,
-.singletag.asciidoc{
+.singletag.singletag_asciidoc{
   background-color: #ff6eb4;
 }
 .inneritem .aspectj,
-.singletag.aspectj{
+.singletag.singletag_aspectj{
   background-color: #ff6a6a;
 }
 .inneritem .autohotkey,
-.singletag.autohotkey{
+.singletag.singletag_autohotkey{
   background-color: #a2cd5a;
 }
 .inneritem .avrasm,
-.singletag.avrasm{
+.singletag.singletag_avrasm{
   background-color: #ff7256;
 }
 .inneritem .axapta,
-.singletag.axapta{
+.singletag.singletag_axapta{
   background-color: #458b00;
 }
 .inneritem .bash,
-.singletag.bash{
+.singletag.singletag_bash{
   background-color: #4169e1;
 }
 .inneritem .brainfuck,
-.singletag.brainfuck{
+.singletag.singletag_brainfuck{
   background-color: #c0c0c0;
 }
 .inneritem .cal,
-.singletag.cal{
+.singletag.singletag_cal{
   background-color: #ff6666;
 }
 .inneritem .capnproto,
-.singletag.capnproto{
+.singletag.singletag_capnproto{
   background-color: #b6fcd5;
 }
 .inneritem .ceylon,
-.singletag.ceylon{
+.singletag.singletag_ceylon{
   background-color: #7fffd4;
 }
 .inneritem .clojure-repl,
-.singletag.clojure-repl{
+.singletag.singletag_clojure-repl{
   background-color: #ff28bb;
 }
 .inneritem .clojure,
-.singletag.clojure{
+.singletag.singletag_clojure{
   background-color: #ff74d3;
 }
 .inneritem .cmake,
-.singletag.cmake{
+.singletag.singletag_cmake{
   background-color: #cd0a0a;
 }
 .inneritem .coffeescript,
-.singletag.coffeescript{
+.singletag.singletag_coffeescript{
   background-color: #f7134e;
 }
 .inneritem .cpp,
-.singletag.cpp{
+.singletag.singletag_cpp{
   background-color: #c50f3e;
 }
 .inneritem .cs,
-.singletag.cs{
+.singletag.singletag_cs{
   background-color: #f72a5f;
 }
 .inneritem .css,
-.singletag.css{
+.singletag.singletag_css{
   background-color: #b54887;
 }
 .inneritem .d,
-.singletag.d{
+.singletag.singletag_d{
   background-color: #1d99d4;
 }
 .inneritem .dart,
-.singletag.dart{
+.singletag.singletag_dart{
   background-color: #00ace6;
 }
 .inneritem .delphi,
-.singletag.delphi{
+.singletag.singletag_delphi{
   background-color: #e3e2e2;
 }
 .inneritem .diff,
-.singletag.diff{
+.singletag.singletag_diff{
   background-color: #8a8c8d;
 }
 .inneritem .django,
-.singletag.django{
+.singletag.singletag_django{
   background-color: #616365;
 }
 .inneritem .dns,
-.singletag.dns{
+.singletag.singletag_dns{
   background-color: #ff9a4e;
 }
 .inneritem .dockerfile,
-.singletag.dockerfile{
+.singletag.singletag_dockerfile{
   background-color: #00abff;
 }
 .inneritem .dos,
-.singletag.dos{
+.singletag.singletag_dos{
   background-color: #1ce5c2;
 }
 .inneritem .dust,
-.singletag.dust{
+.singletag.singletag_dust{
   background-color: #00ecff;
 }
 .inneritem .elixir,
-.singletag.elixir{
+.singletag.singletag_elixir{
   background-color: #f8be78;
 }
 .inneritem .elm,
-.singletag.elm{
+.singletag.singletag_elm{
   background-color: #8dcd91;
 }
 .inneritem .erb,
-.singletag.erb{
+.singletag.singletag_erb{
   background-color: #ee9439;
 }
 .inneritem .erlang-repl,
-.singletag.erlang-repl{
+.singletag.singletag_erlang-repl{
   background-color: #2983a6;
 }
 .inneritem .erlang,
-.singletag.erlang{
+.singletag.singletag_erlang{
   background-color: #048abf;
 }
 .inneritem .fix,
-.singletag.fix{
+.singletag.singletag_fix{
   background-color: #e15258;
 }
 .inneritem .fortran,
-.singletag.fortran{
+.singletag.singletag_fortran{
   background-color: #858585;
 }
 .inneritem .fsharp,
-.singletag.fsharp{
+.singletag.singletag_fsharp{
   background-color: #bfbebe;
 }
 .inneritem .gcode,
-.singletag.gcode{
+.singletag.singletag_gcode{
   background-color: #aaa9a9;
 }
 .inneritem .gherkin,
-.singletag.gherkin{
+.singletag.singletag_gherkin{
   background-color: #b54887;
 }
 .inneritem .glsl,
-.singletag.glsl{
+.singletag.singletag_glsl{
   background-color: #a8f293;
 }
 .inneritem .go,
-.singletag.go{
+.singletag.singletag_go{
   background-color: #a171b8;
 }
 .inneritem .gradle,
-.singletag.gradle{
+.singletag.singletag_gradle{
   background-color: #0f4506;
 }
 .inneritem .groovy,
-.singletag.groovy{
+.singletag.singletag_groovy{
   background-color: #b06c3a;
 }
 .inneritem .haml,
-.singletag.haml{
+.singletag.singletag_haml{
   background-color: #25e7e8;
 }
 .inneritem .handlebars,
-.singletag.handlebars{
+.singletag.singletag_handlebars{
   background-color: #8bef0b;
 }
 .inneritem .haskell,
-.singletag.haskell{
+.singletag.singletag_haskell{
   background-color: #b9d8fd;
 }
 .inneritem .haxe,
-.singletag.haxe{
+.singletag.singletag_haxe{
   background-color: #e97f51;
 }
 .inneritem .http,
-.singletag.http{
+.singletag.singletag_http{
   background-color: #491920;
 }
 .inneritem .inform7,
-.singletag.inform7{
+.singletag.singletag_inform7{
   background-color: #d2ed28;
 }
 .inneritem .ini,
-.singletag.ini{
+.singletag.singletag_ini{
   background-color: #bb5f79;
 }
 .inneritem .java,
-.singletag.java{
+.singletag.singletag_java{
   background-color: #775aef;
 }
 .inneritem .javascript,
-.singletag.javascript{
+.singletag.singletag_javascript{
   background-color: #a03893;
 }
 .inneritem .json,
-.singletag.json{
+.singletag.singletag_json{
   background-color: #6b5da3;
 }
 .inneritem .julia,
-.singletag.julia{
+.singletag.singletag_julia{
   background-color: #cde473;
 }
 .inneritem .kotlin,
-.singletag.kotlin{
+.singletag.singletag_kotlin{
   background-color: #55cc04;
 }
 .inneritem .lasso,
-.singletag.lasso{
+.singletag.singletag_lasso{
   background-color: #8efc9e;
 }
 .inneritem .less,
-.singletag.less{
+.singletag.singletag_less{
   background-color: #21d4d2;
 }
 .inneritem .lisp,
-.singletag.lisp{
+.singletag.singletag_lisp{
   background-color: #5e0169;
 }
 .inneritem .livecodeserver,
-.singletag.livecodeserver{
+.singletag.singletag_livecodeserver{
   background-color: #81df55;
 }
 .inneritem .livescript,
-.singletag.livescript{
+.singletag.singletag_livescript{
   background-color: #4b27da;
 }
 .inneritem .lua,
-.singletag.lua{
+.singletag.singletag_lua{
   background-color: #d8beea;
 }
 .inneritem .makefile,
-.singletag.makefile{
+.singletag.singletag_makefile{
   background-color: #ea3323;
 }
 .inneritem .markdown,
-.singletag.markdown{
+.singletag.singletag_markdown{
   background-color: #3b606c;
 }
 .inneritem .mathematica,
-.singletag.mathematica{
+.singletag.singletag_mathematica{
   background-color: #1b6dff;
 }
 .inneritem .matlab,
-.singletag.matlab{
+.singletag.singletag_matlab{
   background-color: #795595;
 }
 .inneritem .mel,
-.singletag.mel{
+.singletag.singletag_mel{
   background-color: #f972b2;
 }
 .inneritem .mercury,
-.singletag.mercury{
+.singletag.singletag_mercury{
   background-color: #684e4e;
 }
 .inneritem .mizar,
-.singletag.mizar{
+.singletag.singletag_mizar{
   background-color: #099490;
 }
 .inneritem .monkey,
-.singletag.monkey{
+.singletag.singletag_monkey{
   background-color: #36b568;
 }
 .inneritem .nginx,
-.singletag.nginx{
+.singletag.singletag_nginx{
   background-color: #3f7fa7;
 }
 .inneritem .nimrod,
-.singletag.nimrod{
+.singletag.singletag_nimrod{
   background-color: #27bcb4;
 }
 .inneritem .nix,
-.singletag.nix{
+.singletag.singletag_nix{
   background-color: #70ca05;
 }
 .inneritem .nsis,
-.singletag.nsis{
+.singletag.singletag_nsis{
   background-color: #bccf14;
 }
 .inneritem .objectivec,
-.singletag.objectivec{
+.singletag.singletag_objectivec{
   background-color: #9679e5;
 }
 .inneritem .ocaml,
-.singletag.ocaml{
+.singletag.singletag_ocaml{
   background-color: #90deb8;
 }
 .inneritem .openscad,
-.singletag.openscad{
+.singletag.singletag_openscad{
   background-color: #a50777;
 }
 .inneritem .oxygene,
-.singletag.oxygene{
+.singletag.singletag_oxygene{
   background-color: #a43d04;
 }
 .inneritem .parser3,
-.singletag.parser3{
+.singletag.singletag_parser3{
   background-color: #1b852c;
 }
 .inneritem .perl,
-.singletag.perl{
+.singletag.singletag_perl{
   background-color: #e79fcf;
 }
 .inneritem .pf,
-.singletag.pf{
+.singletag.singletag_pf{
   background-color: #5675c1;
 }
 .inneritem .php,
-.singletag.php{
+.singletag.singletag_php{
   background-color: #64663c;
 }
 .inneritem .powershell,
-.singletag.powershell{
+.singletag.singletag_powershell{
   background-color: #66c936;
 }
 .inneritem .processing,
-.singletag.processing{
+.singletag.singletag_processing{
   background-color: #5a4ec5;
 }
 .inneritem .profile,
-.singletag.profile{
+.singletag.singletag_profile{
   background-color: #9285b8;
 }
 .inneritem .prolog,
-.singletag.prolog{
+.singletag.singletag_prolog{
   background-color: #d05fd1;
 }
 .inneritem .protobuf,
-.singletag.protobuf{
+.singletag.singletag_protobuf{
   background-color: #6468dd;
 }
 .inneritem .puppet,
-.singletag.puppet{
+.singletag.singletag_puppet{
   background-color: #9ce346;
 }
 .inneritem .python,
-.singletag.python{
+.singletag.singletag_python{
   background-color: #03b827;
 }
 .inneritem .q,
-.singletag.q{
+.singletag.singletag_q{
   background-color: #dc559d;
 }
 .inneritem .r,
-.singletag.r{
+.singletag.singletag_r{
   background-color: #c2d654;
 }
 .inneritem .rib,
-.singletag.rib{
+.singletag.singletag_rib{
   background-color: #014e8b;
 }
 .inneritem .roboconf,
-.singletag.roboconf{
+.singletag.singletag_roboconf{
   background-color: #be4d92;
 }
 .inneritem .rsl,
-.singletag.rsl{
+.singletag.singletag_rsl{
   background-color: #5cf78b;
 }
 .inneritem .ruby,
-.singletag.ruby{
+.singletag.singletag_ruby{
   background-color: #fd19cc;
 }
 .inneritem .ruleslanguage,
-.singletag.ruleslanguage{
+.singletag.singletag_ruleslanguage{
   background-color: #55616f;
 }
 .inneritem .rust,
-.singletag.rust{
+.singletag.singletag_rust{
   background-color: #1af204;
 }
 .inneritem .scala,
-.singletag.scala{
+.singletag.singletag_scala{
   background-color: #0b1adb;
 }
 .inneritem .scheme,
-.singletag.scheme{
+.singletag.singletag_scheme{
   background-color: #e0b220;
 }
 .inneritem .scilab,
-.singletag.scilab{
+.singletag.singletag_scilab{
   background-color: #a73d53;
 }
 .inneritem .scss,
-.singletag.scss{
+.singletag.singletag_scss{
   background-color: #300dff;
 }
 .inneritem .smali,
-.singletag.smali{
+.singletag.singletag_smali{
   background-color: #0d9297;
 }
 .inneritem .smalltalk,
-.singletag.smalltalk{
+.singletag.singletag_smalltalk{
   background-color: #41fa70;
 }
 .inneritem .sml,
-.singletag.sml{
+.singletag.singletag_sml{
   background-color: #78278a;
 }
 .inneritem .sql,
-.singletag.sql{
+.singletag.singletag_sql{
   background-color: #d167c8;
 }
 .inneritem .stata,
-.singletag.stata{
+.singletag.singletag_stata{
   background-color: #4aba0f;
 }
 .inneritem .step21,
-.singletag.step21{
+.singletag.singletag_step21{
   background-color: #175e12;
 }
 .inneritem .stylus,
-.singletag.stylus{
+.singletag.singletag_stylus{
   background-color: #ccc;
 }
 .inneritem .swift,
-.singletag.swift{
+.singletag.singletag_swift{
   background-color: #06c389;
 }
 .inneritem .tcl,
-.singletag.tcl{
+.singletag.singletag_tcl{
   background-color: #8d1b17;
 }
 .inneritem .tex,
-.singletag.tex{
+.singletag.singletag_tex{
   background-color: #e67efa;
 }
 .inneritem .thrift,
-.singletag.thrift{
+.singletag.singletag_thrift{
   background-color: #d7ae12;
 }
 .inneritem .tp,
-.singletag.tp{
+.singletag.singletag_tp{
   background-color: #1e400f;
 }
 .inneritem .twig,
-.singletag.twig{
+.singletag.singletag_twig{
   background-color: #cd4408;
 }
 .inneritem .typescript,
-.singletag.typescript{
+.singletag.singletag_typescript{
   background-color: #b4c100;
 }
 .inneritem .vala,
-.singletag.vala{
+.singletag.singletag_vala{
   background-color: #9cff44;
 }
 .inneritem .vbnet,
-.singletag.vbnet{
+.singletag.singletag_vbnet{
   background-color: #d70691;
 }
 .inneritem .vbscript,
-.singletag.vbscript{
+.singletag.singletag_vbscript{
   background-color: #64b4df;
 }
 .inneritem .vbscript,
-.singletag.vbscript{
+.singletag.singletag_vbscript{
   background-color: #7308b9;
 }
 .inneritem .verilog,
-.singletag.verilog{
+.singletag.singletag_verilog{
   background-color: #c6a92e;
 }
 .inneritem .vhdl,
-.singletag.vhdl{
+.singletag.singletag_vhdl{
   background-color: #30924c;
 }
 .inneritem .vim,
-.singletag.vim{
+.singletag.singletag_vim{
   background-color: #2ced9a;
 }
 .inneritem .x86asm,
-.singletag.x86asm{
+.singletag.singletag_x86asm{
   background-color: #cfb024;
 }
 .inneritem .xl,
-.singletag.xl{
+.singletag.singletag_xl{
   background-color: #210290;
 }
 .inneritem .xml,
-.singletag.xml{
+.singletag.singletag_xml{
   background-color: #09d25b;
 }
 .inneritem .zephir,
-.singletag.zephir{
+.singletag.singletag_zephir{
   background-color: #a68cb5;
 }
